@@ -1,7 +1,8 @@
 
-/* =====================================
-   GENERAL STYLING
-===================================== */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -9,12 +10,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #48145C;
     color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
-
-/* =====================================
-   NAVBAR
-===================================== */
 
 .navbar {
     display: flex;
@@ -57,11 +56,6 @@ body {
 .menu-icon {
     display: none;
 }
-
-
-/* =====================================
-   HERO SECTION
-===================================== */
 
 .hero {
     height: 350px;
@@ -115,10 +109,6 @@ body {
 }
 
 
-/* =====================================
-   FEATURED COLLECTIONS
-===================================== */
-
 .collections {
     padding: 35px 10%;
     background-color: #48145C;
@@ -160,10 +150,6 @@ body {
     transform: translateY(-5px);
 }
 
-
-/* =====================================
-   NEW ARRIVALS
-===================================== */
 
 .products {
     padding: 15px 10% 35px;
@@ -213,7 +199,6 @@ body {
 }
 
 
-/* VIEW DETAILS BUTTON */
 
 .view-details {
     display: block;
@@ -232,10 +217,6 @@ body {
     background-color: #C91570;
 }
 
-
-/* =====================================
-   BOTTOM SECTION
-===================================== */
 
 .bottom-section {
     display: flex;
@@ -258,9 +239,6 @@ body {
     margin-bottom: 18px;
 }
 
-
-/* FEATURES */
-
 .features {
     display: flex;
     justify-content: space-between;
@@ -282,8 +260,6 @@ body {
     font-size: 15px;
 }
 
-
-/* CUSTOMER FEEDBACK */
 
 .feedback {
     display: flex;
@@ -313,9 +289,6 @@ body {
     font-size: 13px;
     line-height: 1.5;
 }
-
-
-/* NEWSLETTER */
 
 .newsletter-box {
     background-color: #FFE0CD;
@@ -353,9 +326,6 @@ body {
 }
 
 
-/* =====================================
-   FOOTER
-===================================== */
 
 footer {
     background-color: #E92788;
@@ -415,31 +385,16 @@ footer p {
 }
 
 
-/* =====================================
-   PRODUCT DETAILS PAGE
-===================================== */
-
-.shoe-page {
-    background-color: #48145C;
-    color: white;
-    margin: 0;
-    min-height: 100vh;
-}
-
-
-/* MAIN PRODUCT SECTION */
-
 .shoe-detail-page {
     width: 100%;
-    min-height: 100vh;
+    flex: 1;
+    min-height: 0;
     padding: 40px 8%;
-    box-sizing: border-box;
     display: flex;
     align-items: center;
+    background-color: #48145C;
 }
 
-
-/* IMAGE AND DETAILS CONTAINER */
 
 .shoe-detail-container {
     width: 100%;
@@ -450,11 +405,6 @@ footer p {
     gap: 5%;
 }
 
-
-/* =====================================
-   LEFT SIDE IMAGE
-   KEEPING ORIGINAL IMAGE DESIGN
-===================================== */
 
 .shoe-detail-image {
     width: 43%;
@@ -467,171 +417,116 @@ footer p {
     height: 500px;
     object-fit: cover;
     object-position: center;
-    border-radius: 10px;
+    border-radius: 18px;
 }
-
-
-/* =====================================
-   RIGHT SIDE WHITE INFORMATION BOX
-===================================== */
 
 .shoe-detail-info {
     width: 52%;
-    background-color: white;
-    color: #333333;
-
-    padding: 40px;
-    box-sizing: border-box;
-
-    border-radius: 10px;
-
+    background-color: transparent;
+    color: white;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 
-/* COLLECTION NAME */
+.shoe-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.shoe-icons i {
+    font-size: 27px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.shoe-icons i:hover {
+    color: #E92788;
+    transform: scale(1.15);
+}
+
 
 .shoe-detail-info .category {
-    color: #80508B;
+    color: #FFB6D8;
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 12px;
 }
 
-
-/* PRODUCT NAME */
-
 .shoe-detail-info h1 {
-    color: #333333;
-    font-size: 32px;
+    color: white;
+    font-size: 36px;
+    margin: 0 0 12px;
+}
+
+.shoe-tagline {
+    color: white;
+    font-size: 18px;
     margin: 0 0 15px;
 }
 
 
-/* PRICE */
-
-.shoe-detail-info .price {
-    color: #E92788;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 5px 0 15px;
-}
-
-
-/* STAR RATING */
-
 .shoe-rating {
-    color: #F0A000;
-    font-size: 25px;
-    letter-spacing: 2px;
-    margin-top: 10px;
-}
-
-
-/* RATING TEXT */
-
-.rating-number {
-    color: #555555;
-    font-size: 14px;
-    margin: 8px 0 20px;
-}
-
-
-/* FAVOURITE AND COMMENTS BUTTONS */
-
-.shoe-buttons {
     display: flex;
-    gap: 15px;
-    margin-bottom: 25px;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0 25px;
 }
 
-.favourite-btn {
-    background-color: #E92788;
+.shoe-rating .stars {
+    color: #FFA500;
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.shoe-rating .rating-number {
     color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 7px;
-}
-
-.comments-btn {
-    background-color: #FFE0CD;
-    color: #48145C;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 7px;
-}
-
-.favourite-btn:hover {
-    background-color: #C91570;
-}
-
-.comments-btn:hover {
-    background-color: #FFD1B5;
+    font-size: 16px;
+    margin: 0;
 }
 
 
-/* DESCRIPTION HEADING */
+.shoe-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 0 0 25px;
+}
 
-.shoe-detail-info h3 {
-    color: #222222;
+.offer-price {
+    color: #FF4F91;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.original-price {
+    color: white;
     font-size: 19px;
-    margin: 15px 0;
+    text-decoration: line-through;
+}
+
+.discount {
+    color: #00D65B;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
-/* DESCRIPTION */
 
 .shoe-description {
-    color: #555555;
-    font-size: 15px;
+    color: white;
+    font-size: 17px;
     line-height: 1.8;
     margin-bottom: 20px;
 }
-
-
-/* PRODUCT SPECIFICATIONS */
-
-.shoe-detail-info > p:not(.shoe-description):not(.rating-number) {
-    color: #555555;
-    font-size: 15px;
-    margin: 8px 0;
-}
-
-
-/* ADD TO CART BUTTON */
-
-.add-cart-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    background-color: #E92788;
-    color: white;
-    padding: 14px;
-    box-sizing: border-box;
-    border-radius: 7px;
-    text-decoration: none;
-    margin-top: 25px;
-}
-
-.add-cart-btn:hover {
-    background-color: #C91570;
-}
-
-
-/* COMMENTS SECTION */
-
-.comments-section {
-    margin-top: 30px;
-    padding: 15px;
-    border-top: 1px solid #DDDDDD;
-    color: #333333;
-}
-
-
-/* BACK TO SHOPPING BUTTON */
 
 .back-shopping {
     display: inline-block;
@@ -642,6 +537,7 @@ footer p {
     color: white;
     text-decoration: none;
     border-radius: 7px;
+    transition: 0.3s;
 }
 
 .back-shopping:hover {
@@ -649,18 +545,11 @@ footer p {
 }
 
 
-/* =====================================
-   MOBILE RESPONSIVE DESIGN
-===================================== */
-
 @media (max-width: 546px) {
 
     body {
         overflow-x: hidden;
     }
-
-
-    /* NAVBAR */
 
     .navbar {
         flex-direction: row;
@@ -708,10 +597,6 @@ footer p {
     #menu-toggle:checked ~ .menu-icon .fa-xmark {
         display: inline;
     }
-
-
-    /* HERO */
-
     .hero {
         height: 280px;
         padding: 30px 20px;
@@ -729,8 +614,6 @@ footer p {
         flex-wrap: wrap;
     }
 
-
-    /* COLLECTIONS */
 
     .collections {
         padding: 30px 20px;
@@ -750,9 +633,6 @@ footer p {
         height: 180px;
     }
 
-
-    /* NEW ARRIVALS */
-
     .products {
         padding: 20px;
     }
@@ -765,15 +645,11 @@ footer p {
     .product-card {
         width: 100%;
         max-width: 350px;
-        box-sizing: border-box;
     }
 
     .product-card img {
         height: 200px;
     }
-
-
-    /* BOTTOM SECTION */
 
     .bottom-section {
         flex-direction: column;
@@ -808,11 +684,8 @@ footer p {
 
     .newsletter-box {
         width: 100%;
-        box-sizing: border-box;
     }
 
-
-    /* PRODUCT DETAILS MOBILE */
 
     .shoe-detail-page {
         padding: 25px 20px;
@@ -830,30 +703,40 @@ footer p {
 
     .shoe-detail-image img {
         width: 100%;
-        height: 280px;
+        height: 300px;
         object-fit: cover;
     }
 
     .shoe-detail-info {
         width: 100%;
-        padding: 25px;
-        border-radius: 10px;
+        padding: 20px 0;
     }
 
     .shoe-detail-info h1 {
-        font-size: 25px;
+        font-size: 27px;
     }
 
-    .shoe-buttons {
-        flex-wrap: wrap;
+    .shoe-tagline {
+        font-size: 15px;
     }
 
     .shoe-description {
-        font-size: 14px;
+        font-size: 15px;
     }
 
+    .shoe-price {
+        gap: 12px;
+    }
 
-    /* FOOTER */
+    .offer-price {
+        font-size: 30px;
+    }
+
+    .original-price,
+    .discount {
+        font-size: 16px;
+    }
+
 
     footer {
         padding: 25px 20px;

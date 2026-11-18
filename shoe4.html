@@ -1,22 +1,38 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gray Athletic Shoe - WalkWave</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+   
     <nav class="navbar">
         <div class="logo">WalkWave</div>
-        <a href="index.html" class="anchor-link">Home</a>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html#home" class="anchor-link">Home</a></li>
+            <li><a href="index.html#product" class="anchor-link">Shop</a></li>
+            <li><a href="index.html#about" class="anchor-link">About</a></li>
+            <li><a href="index.html#contact" class="anchor-link">Contact</a></li>
+        </ul>
     </nav>
 
-    <section class="shoe-detail-page">
+    
+    <main class="shoe-detail-page">
 
         <div class="shoe-detail-container">
 
@@ -26,33 +42,77 @@
 
             <div class="shoe-detail-info">
 
+                <!-- ICONS -->
+                <div class="shoe-icons">
+                    <i class="fa-regular fa-heart" title="Wishlist"></i>
+                    <i class="fa-regular fa-comment" title="Comments"></i>
+                    <i class="fa-solid fa-share-nodes" title="Share"></i>
+                </div>
+
                 <p class="category">WALKWAVE COLLECTION</p>
 
                 <h1>Gray Athletic Shoe</h1>
 
-                <p class="price">$90.99</p>
+                <p class="shoe-tagline">
+                    Sporty Look | Flexible Sole | All-day Comfort
+                </p>
 
-                <div class="shoe-rating">★★★★☆</div>
-                <p class="rating-number">4/5 Rating</p>
+                <div class="shoe-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-number">4.6/5</span>
+                </div>
 
-                <h3>Description</h3>
+                <!-- PRICE -->
+                <div class="shoe-price">
+                    <span class="offer-price">₹649</span>
+                    <span class="original-price">₹1099</span>
+                    <span class="discount">41% OFF</span>
+                </div>
 
                 <p class="shoe-description">
-                    Experience everyday performance with these gray
-                    athletic shoes. Designed with a comfortable fit,
-                    breathable feel and flexible sole for your
-                    active lifestyle.
+                    Experience everyday comfort with our gray
+                    athletic shoes. Lightweight and stylish,
+                    these shoes are perfect for walking, workouts
+                    and everyday activities.
                 </p>
+
+               
 
                 <a href="index.html#product" class="back-shopping">
                     Back to Shopping
                 </a>
 
             </div>
+        </div>
+    </main>
+
+    
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>12329 Mark Street</p>
+                <p>Address: City, Country</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Email: support@shoestores.com</p>
+            </div>
+
+            <div class="footer-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
 
         </div>
-
-    </section>
+    </footer>
 
 </body>
 </html>

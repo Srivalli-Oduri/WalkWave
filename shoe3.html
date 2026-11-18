@@ -1,22 +1,38 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brown Leather Shoe - WalkWave</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+   
     <nav class="navbar">
         <div class="logo">WalkWave</div>
-        <a href="index.html" class="anchor-link">Home</a>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="index.html#home" class="anchor-link">Home</a></li>
+            <li><a href="index.html#product" class="anchor-link">Shop</a></li>
+            <li><a href="index.html#about" class="anchor-link">About</a></li>
+            <li><a href="index.html#contact" class="anchor-link">Contact</a></li>
+        </ul>
     </nav>
 
-    <section class="shoe-detail-page">
+
+    <main class="shoe-detail-page">
 
         <div class="shoe-detail-container">
 
@@ -26,33 +42,77 @@
 
             <div class="shoe-detail-info">
 
+                <!-- ICONS -->
+                <div class="shoe-icons">
+                    <i class="fa-regular fa-heart" title="Wishlist"></i>
+                    <i class="fa-regular fa-comment" title="Comments"></i>
+                    <i class="fa-solid fa-share-nodes" title="Share"></i>
+                </div>
+
                 <p class="category">WALKWAVE COLLECTION</p>
 
                 <h1>Brown Leather Shoe</h1>
 
-                <p class="price">$99.99</p>
+                <p class="shoe-tagline">
+                    Premium Leather | Elegant Design | Durable
+                </p>
 
-                <div class="shoe-rating">★★★★★</div>
-                <p class="rating-number">5/5 Rating</p>
+                <div class="shoe-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-number">4.7/5</span>
+                </div>
 
-                <h3>Description</h3>
+                <!-- PRICE -->
+                <div class="shoe-price">
+                    <span class="offer-price">₹899</span>
+                    <span class="original-price">₹1499</span>
+                    <span class="discount">40% OFF</span>
+                </div>
 
                 <p class="shoe-description">
-                    Upgrade your look with these elegant brown leather shoes.
-                    Featuring a classic design, comfortable interior
-                    and durable construction. A great choice for
-                    formal and casual occasions.
+                    Upgrade your style with our elegant brown leather
+                    shoes. Designed with a premium finish and
+                    comfortable fitting, perfect for formal and
+                    casual occasions.
                 </p>
+
+               
 
                 <a href="index.html#product" class="back-shopping">
                     Back to Shopping
                 </a>
 
             </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-links">
+                <h2>Quick Links</h2>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contact Us</h2>
+                <p>12329 Mark Street</p>
+                <p>Address: City, Country</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Email: support@shoestores.com</p>
+            </div>
+
+            <div class="footer-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
 
         </div>
-
-    </section>
+    </footer>
 
 </body>
 </html>
